@@ -115,11 +115,6 @@ nav a:hover {
   background: rgba(0, 194, 209, 0.08);
 }
 
-/* Highlight only the Tours text on this page. */
-nav a.active {
-  color: #00C2D1;
-  background: transparent;
-}
 
 /* ============================================
    Hero
