@@ -20,35 +20,65 @@
             font-weight: bold;
             }
 
-            .navbar {
-            background-color: #FFFFFF;
+            header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 100px; 
-            border-bottom: 2px solid #E0E0E0;
+            padding: 12px 30px;
+            background: white;
+            border-bottom: 1px solid var(--line-soft);
+            position: sticky;
+            top: 0;
+            z-index: 50;
             }
 
-            .logo {
-            font-size: 20px;
-            font-weight: bold;
-            letter-spacing: 1.5px;
-            color: #0A1128;
+            .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 230px;
             }
 
-            .navbar a {
-            color: #0A1128;
+            .brand-mark {
+            width: 36px;
+            height: 36px;
+            flex-shrink: 0;
+            }
+
+            .brand-name {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.15rem;
+            letter-spacing: 0.02em;
+            color: var(--navy);
+            }
+
+            .main-nav {
+            display: flex;
+            gap: 0;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            }
+
+            nav a {
+            display: block;
             text-decoration: none;
-            margin-left: 25px;
+            text-transform: uppercase;
+            margin-left: 30px;
+            padding: 11px 14px;
+            border-radius: 5px;
             font-weight: bold;
-            font-size: 14px;
+            color: #0A1128;
+            transition: color 0.15s ease, background-color 0.15s ease;
             }
 
-            .navbar a.active {
-            color: #00C2D1; 
-            border-bottom: 2px solid #00C2D1;
-            padding-bottom: 5px;
+            nav a:hover {
+            color: #00C2D1;
+            background: rgba(0, 194, 209, 0.08);
             }
+
 
             .container {
             max-width: 900px;
@@ -181,17 +211,23 @@
         </style>
     </head>
 
-    <body>
-        <div class="navbar">
-            <img src="logo.png" alt="Uncover Bahamas Logo" class="logo"> 
-            <nav>
-                <a href="index.html">HOME</a>
-                <a href="about.html" class="active">ABOUT US</a>
-                <a href="tours.html">TOURS</a>
-                <a href="contact.html">CONTACT</a>  
-            </nav>
+    
+        <header class="site-header">
+        <div class="brand">
+        <img src="logo.png" alt="Uncover Bahamas" class="brand-mark">
+        <span class="brand-name">Uncover Bahamas</span>
         </div>
+        <nav>
+        <ul class="main-nav">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="tours.html" class="active">TOURS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        </nav>
+        </header>
 
+<body>
         <div class="container">
             
             <div class="about-hero">
