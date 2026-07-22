@@ -52,14 +52,16 @@ button {
 }
 
 /* ============================================
-   Header
+   Header and navigation
+   Based on the same simple header styling used
+   on the other website pages.
    ============================================ */
-.site-header {
+header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 20px 40px;
-  background: var(--foam);
+  align-items: center;
+  padding: 12px 30px;
+  background: white;
   border-bottom: 1px solid var(--line-soft);
   position: sticky;
   top: 0;
@@ -70,6 +72,7 @@ button {
   display: flex;
   align-items: center;
   gap: 12px;
+  width: 230px;
 }
 
 .brand-mark {
@@ -88,29 +91,34 @@ button {
 
 .main-nav {
   display: flex;
-  gap: 32px;
+  gap: 0;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.main-nav a {
+nav a {
+  display: block;
   text-decoration: none;
-  font-size: 0.92rem;
-  font-weight: 500;
-  color: var(--ink-soft);
-  letter-spacing: 0.01em;
-  padding-bottom: 4px;
-  border-bottom: 2px solid transparent;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  text-transform: uppercase;
+  margin-left: 30px;
+  padding: 11px 14px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #0A1128;
+  transition: color 0.15s ease, background-color 0.15s ease;
 }
 
-.main-nav a:hover { color: var(--navy); }
+nav a:hover {
+  color: #00C2D1;
+  background: rgba(0, 194, 209, 0.08);
+}
 
-.main-nav a[aria-current="page"] {
-  color: var(--navy);
-  border-bottom-color: var(--canary);
-  font-weight: 600;
+/* Highlight only the Tours text on this page. */
+nav a.active {
+  color: #00C2D1;
+  background: transparent;
 }
 
 /* ============================================
@@ -545,7 +553,7 @@ button {
     width: auto;
   }
 
-  .site-header { padding: 16px 20px; }
+  header { padding: 12px 20px; }
   .main-nav { display: none; }
   .hero { padding: 56px 20px 72px; }
   .trip-builder { padding: 0 20px; }
